@@ -1,0 +1,7 @@
+[
+  {
+    "name": "RPi4 SDK",
+    "toolchainFile": "/opt/poky/5.0.6/sysroots/x86_64-pokysdk-linux/usr/share/cmake/OEToolchainConfig.cmake",
+    "environmentSetupScript": "/opt/poky/5.0.6/environment-setup-cortexa72-poky-linux"
+  }
+]

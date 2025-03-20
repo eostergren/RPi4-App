@@ -1,0 +1,38 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "CMake: install",
+			"type": "cmake",
+			"command": "install",
+			"problemMatcher": [],
+			"detail": "CMake template install task",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "prepare-gdbserver",
+			"isBackground": true,
+			"problemMatcher": {
+				"base": "$gcc",
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "Deploying to target",
+					"endsPattern": "Starting GDB Server on Target"
+				}
+			},
+			"type": "shell",
+			"command": "bash",
+			"args": [
+				"${workspaceFolder}/scripts/gdbserver.sh",
+				"/usr/bin/${command:cmake.getLaunchTargetFilename}",
+				"${config:RPI4.IP_ADDRESS}"
+			],
+			"dependsOn": [
+				"CMake: install"
+			],
+		}
+	]
+}

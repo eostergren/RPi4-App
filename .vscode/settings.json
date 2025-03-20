@@ -1,0 +1,12 @@
+{
+    "RPI4": {
+        "IP_ADDRESS": "raspberrypi4-64"
+    },
+    "cmake.configureSettings": {
+        "CMAKE_INSTALL_PREFIX": "/usr"
+    },
+    "cmake.environment": {
+        "DESTDIR": "/mnt/rpi4",
+        "CCACHE_COMPILERCHECK": "content",
+    },
+}
